@@ -12,7 +12,7 @@
 <body>
 <style>
 body,html{margin:0;padding:0;background:#faf8ef;color:#776e65;font-size:18px;font-family:Clear Sans,Helvetica Neue,Arial,sans-serif}
-body{margin:5pc 0}
+body{margin:1pc 0}
 input{display:inline-block;box-sizing:border-box;margin:0;padding:0 20px;height:40px;outline:0;border:none;border-radius:3px;background:#8f7a66;color:#f9f6f2;text-decoration:none;font:inherit;font-weight:700;line-height:42px;cursor:pointer;-webkit-appearance:none;-moz-appearance:none;appearance:none}
 input[type=email],input[type=text]{padding:0 15px;background:#fcfbf9;color:#776e65;font-weight:400;cursor:auto}
 input[type=email]::-webkit-input-placeholder,input[type=text]::-webkit-input-placeholder{color:#9d948c}
@@ -49,7 +49,7 @@ to{margin-top:20%}
 @keyframes slide-up{0%{margin-top:32%}
 to{margin-top:20%}
 }
-.game-container{position:relative;box-sizing:border-box;margin-top:40px;padding:15px;width:500px;height:500px;border-radius:6px;background:#bbada0;cursor:default;-webkit-touch-callout:none;-ms-touch-callout:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;-ms-touch-action:none;touch-action:none}
+.game-container{position:relative;box-sizing:border-box;margin-top:20px;padding:15px;width:500px;height:500px;border-radius:6px;background:#bbada0;cursor:default;-webkit-touch-callout:none;-ms-touch-callout:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;-ms-touch-action:none;touch-action:none}
 .game-message{position:absolute;top:0;right:0;bottom:0;left:0;z-index:100;display:none;padding-top:40px;background:hsla(30,37%,89%,.73);text-align:center;-webkit-animation:fade-in .8s ease 1.2s;animation:fade-in .8s ease 1.2s;-webkit-animation-fill-mode:both;animation-fill-mode:both}
 .game-message p{margin-top:222px;height:60px;font-weight:700;font-size:60px;line-height:60px}
 .game-message .lower{display:block;margin-top:29px}
@@ -243,8 +243,8 @@ to{margin-top:10px;opacity:1;-webkit-transform:scale(1) translateZ(0);transform:
 	</div>
 	</div>
 	<div class="above-game">
-	<p class="game-intro">WSAD 或 方向键进行移动方块，合成 <strong>2048</strong> 就成功了！</p>
-	<a class="restart-button">重新开始(R)</a>
+	<p class="game-intro">WSAD 或 方向键移动</p>
+	<a class="restart-button">重新开始</a>
 	</div>
 	<div class="game-container">
 	<div class="game-message">
@@ -983,9 +983,9 @@ defineElementGetter(HTMLElement.prototype, 'classList', function () {
 				}
 
 				// R key restarts the game
-				if (!modifiers && event.which === 82) {
-				self.restart.call(self, event);
-				}
+				//if (!modifiers && event.which === 82) {
+				//	self.restart.call(self, event);
+				//}
 		});
 
 		// Respond to button presses
